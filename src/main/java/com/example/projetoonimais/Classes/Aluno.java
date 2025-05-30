@@ -2,22 +2,30 @@ package com.example.projetoonimais.Classes;
 
 import java.util.EnumSet;
 
-
 public class Aluno extends Pessoa {
     protected String instituicao;
-    protected String email;
-    protected int telefone;
-    protected String end;
-    private EnumSet<Dias> diasDeAula;
+    protected EnumSet<Dias> diasSelecionados;
 
-
-    public Aluno(String CPF, String nome, int idade, String email, String telefone, String endereco, String instituicao, String email1, int telefone1, String end) {
+    public Aluno(String CPF, String nome, int idade, String email, String telefone, String endereco, String instituicao, EnumSet<Dias> diasSelecionados) {
         super(CPF, nome, idade, email, telefone, endereco);
         this.instituicao = instituicao;
-        this.email = email1;
-        this.telefone = telefone1;
-        this.end = end;
+        this.diasSelecionados = diasSelecionados;
     }
 
+    public void setDiasSelecionados(EnumSet<Dias> diasSelecionados) {
+        this.diasSelecionados = diasSelecionados;
+    }
+
+    public EnumSet<Dias> getDiasSelecionados() {
+        return diasSelecionados;
+    }
+
+    public void setInstituicao(String instituicao) {
+        this.instituicao = instituicao;
+    }
+
+    public void adicionarDia(Dias diaDeAula){
+        diasSelecionados.add(diaDeAula);
+    }
 
 }

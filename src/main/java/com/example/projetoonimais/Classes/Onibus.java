@@ -46,7 +46,7 @@ public class Onibus {
         return emManutencao;
     }
 
-    public void setEmManutencao(boolean emManutencao) {
+    public void setEmManutencao(boolean emManutencao)    {
         this.emManutencao = emManutencao;
     }
 
