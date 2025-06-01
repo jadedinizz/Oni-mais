@@ -1,5 +1,4 @@
-# Oni-mais
-# 🚌 Sistema de Gerenciamento de Ônibus
+# 🚌 Oni+ - Sistema de Gerenciamento de Ônibus
 
 Projeto desenvolvido para a disciplina de Programação Orientada a Objetos (POO), com o objetivo de simular o gerenciamento de ônibus escolares, incluindo cadastro de alunos e motoristas, alocação de dias de uso e controle de disponibilidade.
 
@@ -41,4 +40,4 @@ Projeto desenvolvido para a disciplina de Programação Orientada a Objetos (POO
 
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/seu-usuario/seu-repositorio.git
+   git clone https://github.com/jadedinizz/Oni-mais.git
