@@ -1,10 +1,9 @@
 package com.example.projetoonimais.Classes;
 
+import com.example.projetoonimais.Exceptions.*;
+
 import java.util.ArrayList;
 import java.util.EnumSet;
-import java.io.BufferedWriter;
-import java.io.FileWriter;
-import java.io.IOException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
@@ -25,10 +24,10 @@ public class Main {
 
             // Validação dos documentos dos alunos
             if (!validarCPF("12345678900")) {
-                throw new IllegalArgumentException("CPF do aluno 1 é inválido");
+                throw new CpfException("CPF do aluno 1 é inválido");
             }
             if (!validarCPF("98765432100")) {
-                throw new IllegalArgumentException("CPF do aluno 2 é inválido");
+                throw new CpfException("CPF do aluno 2 é inválido");
             }
 
             // Criação dos alunos
@@ -45,14 +44,14 @@ public class Main {
 
             // Criação do secretário de alunos
             if (!validarCPF("11111111111")) {
-                throw new IllegalArgumentException("CPF do secretário é inválido");
+                throw new CpfException("CPF do secretário é inválido");
             }
             SecretarioAluno secretarioAluno = new SecretarioAluno("11111111111", "Carlos", 30, "sec@email.com", "000000000", "Rua C");
             dadosParaArquivo.add("Secretário de alunos: " + secretarioAluno.getNome());
             dadosParaArquivo.add("");
 
             if (listaAlunos.isEmpty()) {
-                throw new IllegalStateException("Nenhum aluno disponível para alocação");
+                throw new StudentException("Nenhum aluno disponível para alocação");
             }
             secretarioAluno.alocarAluno(listaAlunos);
             dadosParaArquivo.add("Alunos alocados com sucesso");
@@ -66,10 +65,10 @@ public class Main {
 
             // Criação dos motoristas
             if (!validarCNH(123456)) {
-                throw new IllegalArgumentException("CNH do motorista 1 é inválida");
+                throw new CnhException("CNH do motorista 1 é inválida");
             }
             if (!validarCNH(654321)) {
-                throw new IllegalArgumentException("CNH do motorista 2 é inválida");
+                throw new CnhException("CNH do motorista 2 é inválida");
             }
 
             Motorista motorista1 = new Motorista("22222222222", "Pedro", 45, "pedro@email.com", "111111111", "Rua D", 123456, 111111111);
@@ -86,7 +85,7 @@ public class Main {
             // Alocação de motoristas
             SecretarioMotorista secretarioMotorista = new SecretarioMotorista();
             if (listaMotoristas.isEmpty()) {
-                throw new IllegalStateException("Nenhum motorista disponível para alocação");
+                throw new DriverException("Nenhum motorista disponível para alocação");
             }
             secretarioMotorista.alocarMotorista(listaMotoristas);
             secretarioMotorista.listarIten();
@@ -106,7 +105,7 @@ public class Main {
             // Alocação de ônibus
             SecretarioOnibus secretarioOnibus = new SecretarioOnibus();
             if (listaOnibus.isEmpty()) {
-                throw new IllegalStateException("Nenhum ônibus disponível para alocação");
+                throw new BusException("Nenhum ônibus disponível para alocação");
             }
             secretarioOnibus.alocarOnibus(listaOnibus);
             secretarioOnibus.verificarDados();
@@ -118,7 +117,7 @@ public class Main {
         } catch (IllegalArgumentException e) {
             dadosParaArquivo.add("ERRO DE VALIDAÇÃO: " + e.getMessage());
             System.err.println("Erro de validação: " + e.getMessage());
-        } catch (IllegalStateException e) {
+        } catch (InvalidException e) {
             dadosParaArquivo.add("ERRO DE ESTADO: " + e.getMessage());
             System.err.println("Erro de estado do sistema: " + e.getMessage());
         } catch (Exception e) {
@@ -131,7 +130,7 @@ public class Main {
             dadosParaArquivo.add("Fim da execução: " + LocalDateTime.now().format(formatter));
 
             // Escrever no arquivo
-            escreverEmArquivo("relatorio_transporte.txt", dadosParaArquivo);
+            Arquivos.escreverEmArquivo("relatorio_transporte.txt", dadosParaArquivo);
             System.out.println("Processo concluído. Verifique o arquivo relatorio_transporte.txt");
         }
     }
@@ -148,15 +147,5 @@ public class Main {
         return cnh > 0;
     }
 
-    private static void escreverEmArquivo(String nomeArquivo, ArrayList<String> dados) {
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(nomeArquivo))) {
-            for (String linha : dados) {
-                writer.write(linha);
-                writer.newLine();
-            }
-            writer.flush();
-        } catch (IOException e) {
-            System.err.println("Erro ao escrever no arquivo: " + e.getMessage());
-        }
-    }
+
 }
