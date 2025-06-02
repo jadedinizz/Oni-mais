@@ -1,5 +1,7 @@
 package com.example.projetoonimais.Classes;
 
+import com.example.projetoonimais.Exceptions.CpfException;
+
 import java.util.EnumSet;
 
 public class Aluno extends Pessoa {
@@ -26,6 +28,15 @@ public class Aluno extends Pessoa {
 
     public void adicionarDia(Dias diaDeAula){
         diasSelecionados.add(diaDeAula);
+    }
+
+    public void contemLetras(String texto) throws CpfException {
+        for (int i = 0; i < texto.length(); i++) {
+            if (Character.isLetter(texto.charAt(i))) {
+                if (texto.length() >= 11)
+                    throw new CpfException("CPF inválido");
+            }
+        }
     }
 
 }
