@@ -22,7 +22,6 @@ public class Motorista extends Pessoa {
         this.CNH = CNH;
     }
 
-
     public void setTelefone(int telefone) {
         this.telefone = telefone;
     }
