@@ -1,6 +1,6 @@
 Relatório do Sistema de Transporte
 ====================================
-Início da execução: 01/06/2025 13:01:26
+Início da execução: 02/06/2025 00:53:08
 
 Alunos criados:
 - Maria (CPF: 12345678900)
@@ -25,4 +25,4 @@ Motoristas alocados com sucesso
 Todas as operações foram concluídas com sucesso!
 
 ====================================
-Fim da execução: 01/06/2025 13:01:26
+Fim da execução: 02/06/2025 00:53:08
