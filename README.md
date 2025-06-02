@@ -1,4 +1,4 @@
-# 🚌 Oni+ Sistema de Gerenciamento de Ônibus
+# 🚌 Ôni+ Sistema de Gerenciamento de Ônibus
 
 Projeto desenvolvido pelos alunos do 2° periódo do curso de ADS para a disciplina de Programação Orientada a Objetos (POO), com o objetivo de simular o gerenciamento de ônibus escolares, incluindo cadastro de alunos e motoristas, alocação de dias de uso e controle de disponibilidade.
 
