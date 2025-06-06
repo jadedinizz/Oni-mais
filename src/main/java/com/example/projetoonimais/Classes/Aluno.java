@@ -3,14 +3,17 @@ package com.example.projetoonimais.Classes;
 import java.util.EnumSet;
 
 public class Aluno extends Pessoa {
-    protected String instituicao;
-    protected EnumSet<Dias> diasSelecionados;
+    private String instituicao;
+    private EnumSet<Dias> diasSelecionados;
 
     public Aluno(String CPF, String nome, int idade, String email, String telefone, String endereco, String instituicao, EnumSet<Dias> diasSelecionados) {
         super(CPF, nome, idade, email, telefone, endereco);
         this.instituicao = instituicao;
         this.diasSelecionados = diasSelecionados;
     }
+
+
+
 
     public void setDiasSelecionados(EnumSet<Dias> diasSelecionados) {
         this.diasSelecionados = diasSelecionados;
@@ -28,4 +31,10 @@ public class Aluno extends Pessoa {
         diasSelecionados.add(diaDeAula);
     }
 
+
+    // Get e set
+
+    public String getInstituicao() {
+        return instituicao;
+    }
 }

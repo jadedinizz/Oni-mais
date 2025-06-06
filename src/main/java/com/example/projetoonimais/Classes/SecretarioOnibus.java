@@ -8,14 +8,22 @@ public class SecretarioOnibus implements SecretarioInterface {
     private ArrayList<Motorista> todosOsMotoristas = new ArrayList<>();
     private static int quantidadeTotalDeOnibus = 0;
 
+    public void adicionarOnibus(Onibus o) {
+        todosOsOnibus.add(o);
+        quantidadeTotalDeOnibus++;
+    }
 
+
+    public ArrayList<Onibus> getTodosOsOnibus() {
+        return todosOsOnibus;
+    }
     public void alocarOnibus(ArrayList<Onibus> onibus) {
         this.todosOsOnibus = onibus;
 
         for (Onibus onibusCriando : this.todosOsOnibus){
             onibusCriando.setId(12);
             onibusCriando.setCapacidade(30);
-            onibusCriando.setPlaca("AIDS-34");
+            onibusCriando.setPlaca("AIJD34");
             onibusCriando.setEmManutencao(false);
         }
         quantidadeTotalDeOnibus++;
@@ -43,4 +51,5 @@ public class SecretarioOnibus implements SecretarioInterface {
             System.out.println("Em Manutenção: " + (o.isEmManutencao() ? "Disponivel" : "Em manutenção"));
         }
     }
+
 }

@@ -26,7 +26,7 @@ public class SecretarioMotorista implements SecretarioInterface {
         for (Motorista motorista : motoristas) {
             System.out.println(motorista.getNome());
             System.out.println(motorista.getCNH());
-            System.out.println(motorista.getCPF());
+            System.out.println(motorista.getCpf());
             System.out.println(motorista.getEmail());
             System.out.println(motorista.getTelefone());
             System.out.println(motorista.getIdade());
@@ -39,7 +39,7 @@ public class SecretarioMotorista implements SecretarioInterface {
         System.out.println("Lista de motoristas");
         for (Motorista motorista : motoristas){
             System.out.println(motorista.getNome());
-            System.out.println(motorista.getCPF());
+            System.out.println(motorista.getCpf());
             System.out.println(motorista.getCNH());
             System.out.println(motorista.getTelefone());
         }

@@ -4,5 +4,7 @@ module com.example.projetoonimais {
 
 
     opens com.example.projetoonimais to javafx.fxml;
+    opens com.example.projetoonimais.Classes to javafx.base;
+
     exports com.example.projetoonimais;
 }

@@ -66,14 +66,14 @@
                </children>
             </AnchorPane>
             <Button fx:id="btnCadastrar" layoutX="1071.0" layoutY="252.0" mnemonicParsing="false" onAction="#abrirTelaCadastro" prefHeight="26.0" prefWidth="113.0" text="Cadastrar" />
-            <TableView layoutX="323.0" layoutY="287.0" prefHeight="282.0" prefWidth="874.0">
+            <TableView fx:id="tabelaAlunos" layoutX="323.0" layoutY="287.0" prefHeight="282.0" prefWidth="874.0">
                <columns>
-                  <TableColumn prefWidth="135.4666748046875" text="Nome" />
-                  <TableColumn minWidth="0.0" prefWidth="138.39999389648438" text="CPF" />
-                  <TableColumn minWidth="0.0" prefWidth="162.13330078125" text="Email" />
-                  <TableColumn minWidth="0.0" prefWidth="163.73333740234375" text="Telefone" />
-                  <TableColumn minWidth="0.0" prefWidth="143.2000732421875" text="Endereço" />
-                  <TableColumn minWidth="0.0" prefWidth="126.133544921875" text="Instituição" />
+                  <TableColumn fx:id="cpfColumn" minWidth="0.0" prefWidth="138.39999389648438" text="CPF" />
+                  <TableColumn fx:id="emailColumn" minWidth="0.0" prefWidth="162.13330078125" text="Email" />
+                  <TableColumn fx:id="telefoneColumn" minWidth="0.0" prefWidth="163.73333740234375" text="Telefone" />
+                  <TableColumn fx:id="enderecoColumn" minWidth="0.0" prefWidth="143.2000732421875" text="Endereço" />
+                  <TableColumn fx:id="instituicaoColumn" minWidth="0.0" prefWidth="126.133544921875" text="Instituição" />
+                  <TableColumn fx:id="nomeColumn" prefWidth="135.4666748046875" text="Nome" />
                </columns>
             </TableView>
             <Button layoutX="354.0" layoutY="93.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="242.0" text="Alunos" />

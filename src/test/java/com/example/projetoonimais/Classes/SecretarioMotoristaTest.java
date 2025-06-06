@@ -33,7 +33,7 @@ public class SecretarioMotoristaTest {
         for (Motorista motorista : listaMotoristas) {
             assertEquals("Robertão", motorista.getNome());
             assertEquals(12, motorista.getIdade());
-            assertEquals("1232430240", motorista.getCPF());
+            assertEquals("1232430240", motorista.getCpf());
             assertEquals("fldfalkfs@gmaiskfskf", motorista.getEmail());
             assertEquals("40028922", motorista.getTelefone());
             assertEquals("Rua 143424", motorista.getEndereco());

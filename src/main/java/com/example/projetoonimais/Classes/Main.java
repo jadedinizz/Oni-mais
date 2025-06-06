@@ -24,7 +24,7 @@ public class Main {
             EnumSet<Dias> diasAluno2 = EnumSet.of(Dias.TERCA, Dias.QUINTA, Dias.SEXTA);
 
             // Validação dos documentos dos alunos
-            if (!validarCPF("123456789001")) {
+            if (!validarCPF("12345678900")) {
                 throw new CpfException("CPF do aluno 1 é inválido");
             }
             if (!validarCPF("98765432100")) {
@@ -35,18 +35,19 @@ public class Main {
             Aluno aluno1 = new Aluno("12345678900", "Maria", 20, "maria@email.com", "123456789", "Rua A", "Unifip", diasAluno1);
             Aluno aluno2 = new Aluno("98765432100", "João", 22, "joao@email.com", "987654321", "Rua B", "Unifip", diasAluno2);
             dadosParaArquivo.add("Alunos criados:");
-            dadosParaArquivo.add("- " + aluno1.getNome() + " (CPF: " + aluno1.getCPF() + ")");
-            dadosParaArquivo.add("- " + aluno2.getNome() + " (CPF: " + aluno2.getCPF() + ")");
+            dadosParaArquivo.add("- " + aluno1.getNome() + " (CPF: " + aluno1.getCpf() + ")");
+            dadosParaArquivo.add("- " + aluno2.getNome() + " (CPF: " + aluno2.getCpf() + ")");
             dadosParaArquivo.add("");
 
             ArrayList<Aluno> listaAlunos = new ArrayList<>();
             listaAlunos.add(aluno1);
             listaAlunos.add(aluno2);
 
-            // Criação do secretário de alunos
+
             if (!validarCPF("11111111111")) {
                 throw new CpfException("CPF do secretário é inválido");
             }
+            // Criação do secretário de alunos
             SecretarioAluno secretarioAluno = new SecretarioAluno("11111111111", "Carlos", 30, "sec@email.com", "454584818", "Rua C");
             dadosParaArquivo.add("Secretário de alunos: " + secretarioAluno.getNome());
             dadosParaArquivo.add("");
@@ -94,8 +95,8 @@ public class Main {
             dadosParaArquivo.add("");
 
             // Criação dos ônibus
-            Onibus onibus1 = new Onibus();
-            Onibus onibus2 = new Onibus();
+            Onibus onibus1 = new Onibus(12, "ads32", 13, false);
+            Onibus onibus2 = new Onibus(14,"sds32", 32, false);
             dadosParaArquivo.add("Ônibus registrados: 2 veículos");
             dadosParaArquivo.add("");
 

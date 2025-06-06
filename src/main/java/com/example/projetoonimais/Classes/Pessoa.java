@@ -20,7 +20,7 @@ public abstract class Pessoa {
         this.endereco = endereco;
     }
 
-    public String getCPF() {
+    public String getCpf() {
         return CPF;
     }
 

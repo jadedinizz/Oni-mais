@@ -143,12 +143,12 @@
                </children>
             </AnchorPane>
             <Button layoutX="1028.0" layoutY="236.0" mnemonicParsing="false" onAction="#abrirTelaCadastroOnibus" prefHeight="26.0" prefWidth="146.0" text="Adicionar Ônibus" />
-            <TableView layoutX="323.0" layoutY="291.0" prefHeight="278.0" prefWidth="627.0">
+            <TableView fx:id="tabelaOnibus" layoutX="323.0" layoutY="291.0" prefHeight="278.0" prefWidth="627.0">
                <columns>
-                  <TableColumn prefWidth="135.4666748046875" text="ID Ônibus" />
-                  <TableColumn minWidth="0.0" prefWidth="138.39999389648438" text="Placa" />
-                  <TableColumn minWidth="0.0" prefWidth="162.13330078125" text="Capacidade" />
-                  <TableColumn minWidth="0.0" prefWidth="163.73333740234375" text="Status" />
+                  <TableColumn fx:id="colunaId" prefWidth="135.4666748046875" text="ID Ônibus" />
+                  <TableColumn fx:id="colunaPlaca" minWidth="0.0" prefWidth="138.39999389648438" text="Placa" />
+                  <TableColumn fx:id="colunaCapacidade" minWidth="0.0" prefWidth="162.13330078125" text="Capacidade" />
+                  <TableColumn fx:id="colunaStatus" minWidth="0.0" prefWidth="163.73333740234375" text="Status" />
                </columns>
             </TableView>
             <Button layoutX="354.0" layoutY="93.0" mnemonicParsing="false" onAction="#abrirTelaAlunos" prefHeight="35.0" prefWidth="242.0" text="Alunos" />

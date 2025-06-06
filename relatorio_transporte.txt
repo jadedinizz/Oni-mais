@@ -1,8 +1,28 @@
 Relatório do Sistema de Transporte
 ====================================
-Início da execução: 02/06/2025 18:48:42
+Início da execução: 06/06/2025 18:56:48
 
-ERRO INESPERADO: CPF do aluno 1 é inválido
+Alunos criados:
+- Maria (CPF: 12345678900)
+- João (CPF: 98765432100)
+
+Secretário de alunos: Carlos
+
+Alunos alocados com sucesso
+
+Verificação de presença realizada para terça-feira
+
+Motoristas registrados:
+- Pedro (CNH: 123456)
+- Ana (CNH: 654321)
+
+Motoristas alocados com sucesso
+
+Ônibus registrados: 2 veículos
+
+Ônibus alocados com sucesso
+
+Todas as operações foram concluídas com sucesso!
 
 ====================================
-Fim da execução: 02/06/2025 18:48:42
+Fim da execução: 06/06/2025 18:56:48
