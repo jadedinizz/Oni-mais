@@ -1,6 +1,6 @@
 package com.example.projetoonimais.Classes;
 
-public interface SecretarioPoggers {
+public interface SecretarioInterface {
 
     void verificarDados();
     void listarIten();

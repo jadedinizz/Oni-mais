@@ -8,9 +8,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projetoonimais.TelaOnibusController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projetoonimais.TelaMotoristaController">
    <children>
-      <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="720.0" prefWidth="1280.0">
+      <AnchorPane layoutX="10.0" layoutY="10.0" onDragDetected="#abrirTelaCadastroMotorista" prefHeight="720.0" prefWidth="1280.0">
          <children>
             <AnchorPane layoutX="-1.0" layoutY="-11.0" prefHeight="70.0" prefWidth="1280.0" style="-fx-background-color: #D9EBFB;">
                <children>
@@ -135,30 +135,28 @@
             </AnchorPane>
             <AnchorPane layoutX="312.0" layoutY="193.0" prefHeight="39.0" prefWidth="896.0" style="-fx-background-color: #DFE9D8;">
                <children>
-                  <Label layoutX="331.0" layoutY="6.0" prefHeight="26.0" prefWidth="234.0" text="Gerenciamento de Ônibus">
+                  <Label layoutX="331.0" layoutY="6.0" prefHeight="26.0" prefWidth="234.0" text="Gerenciamento de Motoristas">
                      <font>
                         <Font size="17.0" />
                      </font>
                   </Label>
                </children>
             </AnchorPane>
-            <Button layoutX="1028.0" layoutY="236.0" mnemonicParsing="false" onAction="#abrirTelaCadastroOnibus" prefHeight="26.0" prefWidth="146.0" text="Adicionar Ônibus" />
+            <Button layoutX="1028.0" layoutY="236.0" mnemonicParsing="false" onAction="#abrirTelaCadastroMotorista" prefHeight="26.0" prefWidth="146.0" text="Adicionar Motoristas" />
             <TableView layoutX="323.0" layoutY="291.0" prefHeight="278.0" prefWidth="627.0">
                <columns>
-                  <TableColumn prefWidth="135.4666748046875" text="ID Ônibus" />
-                  <TableColumn minWidth="0.0" prefWidth="138.39999389648438" text="Placa" />
-                  <TableColumn minWidth="0.0" prefWidth="162.13330078125" text="Capacidade" />
-                  <TableColumn minWidth="0.0" prefWidth="163.73333740234375" text="Status" />
+                  <TableColumn prefWidth="135.4666748046875" text="Nome" />
+                  <TableColumn minWidth="0.0" prefWidth="138.39999389648438" text="CNH" />
+                  <TableColumn minWidth="0.0" prefWidth="162.13330078125" text="CPF" />
+                  <TableColumn minWidth="0.0" prefWidth="163.73333740234375" text="Telefone" />
                </columns>
             </TableView>
             <Button layoutX="354.0" layoutY="93.0" mnemonicParsing="false" onAction="#abrirTelaAlunos" prefHeight="35.0" prefWidth="242.0" text="Alunos" />
             <Button layoutX="647.0" layoutY="94.0" mnemonicParsing="false" onAction="#abrirTelaOnibus" prefHeight="35.0" prefWidth="234.0" text="Onibus" />
-            <Button layoutX="934.0" layoutY="93.0" mnemonicParsing="false" onAction="#abrirTelaMotorista" prefHeight="35.0" prefWidth="234.0" text="Motoristas" />
+            <Button layoutX="934.0" layoutY="93.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="234.0" text="Motoristas" />
             <Button layoutX="1004.0" layoutY="424.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="134.0" text="Ver detalhes" />
-            <Button layoutX="1007.0" layoutY="366.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="130.0" text="EditarStatus" />
+            <Button layoutX="1007.0" layoutY="366.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="130.0" text="Atualizar Cadastro" />
             <Label layoutX="1056.0" layoutY="297.0" prefHeight="18.0" prefWidth="32.0" text="Ações" />
-            <Label layoutX="323.0" layoutY="241.0" prefHeight="18.0" prefWidth="166.0" text="Quantidade em manuntenção:" />
-            <Label layoutX="323.0" layoutY="259.0" prefHeight="18.0" prefWidth="166.0" text="Quantidade ônibus hoje:" />
          </children>
       </AnchorPane>
    </children>

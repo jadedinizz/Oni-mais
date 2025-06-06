@@ -11,27 +11,9 @@ import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import java.io.IOException;
 
-public class TelaAlunosController {
 
-    @FXML
-    private void abrirTelaCadastro(ActionEvent event) throws Exception {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/projetoonimais/cadastroAluno.fxml"));
-        Parent root = loader.load();
+public class TelaMotoristaController {
 
-        // Pega a Stage atual através do evento
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        stage.setScene(new Scene(root));
-        stage.setTitle("Cadastro de Alunos");
-        stage.show();
-    }
-
-    @FXML
-    private Button btnOnibus;  // Referência para o botão "Onibus"
-
-    @FXML
-    private void initialize() {
-        // Se quiser, pode fazer alguma inicialização aqui
-    }
 
     @FXML
     private void abrirTelaOnibus(ActionEvent event) {
@@ -52,14 +34,18 @@ public class TelaAlunosController {
     }
 
     @FXML
-    private void abrirTelaMotorista(ActionEvent event) {
+    private void abrirTelaAlunos(ActionEvent event) {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/projetoonimais/telaMotorista.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/projetoonimais/telaAlunos.fxml"));
             Scene novaCena = new Scene(loader.load());
+
+            // Pega a janela atual (Stage) a partir do botão clicado
             Stage stageAtual = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
             stageAtual.setScene(novaCena);
-            stageAtual.setTitle("Cadastro de Motoristas");
+            stageAtual.setTitle("Tela Onibus");
             stageAtual.show();
+
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -86,7 +72,7 @@ public class TelaAlunosController {
             Scene novaCena = new Scene(loader.load());
             Stage stageAtual = (Stage) ((Node) event.getSource()).getScene().getWindow();
             stageAtual.setScene(novaCena);
-            stageAtual.setTitle("Cadastro de Aluno");
+            stageAtual.setTitle("Cadastro de Motorista");
             stageAtual.show();
         } catch (IOException e) {
             e.printStackTrace();
@@ -100,7 +86,7 @@ public class TelaAlunosController {
             Scene novaCena = new Scene(loader.load());
             Stage stageAtual = (Stage) ((Node) event.getSource()).getScene().getWindow();
             stageAtual.setScene(novaCena);
-            stageAtual.setTitle("Cadastro de Aluno");
+            stageAtual.setTitle("Cadastro de Motorista");
             stageAtual.show();
         } catch (IOException e) {
             e.printStackTrace();

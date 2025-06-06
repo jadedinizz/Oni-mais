@@ -2,11 +2,9 @@ package com.example.projetoonimais.Classes;
 
 import java.util.ArrayList;
 
-public class SecretarioMotorista implements SecretarioPoggers {
+public class SecretarioMotorista implements SecretarioInterface {
 
     private ArrayList<Motorista> motoristas = new ArrayList<>();
-
-
 
     void alocarMotorista(ArrayList<Motorista> motorista){
         this.motoristas = motorista;
@@ -26,13 +24,13 @@ public class SecretarioMotorista implements SecretarioPoggers {
     @Override
     public void verificarDados() {
         for (Motorista motorista : motoristas) {
-            motorista.getNome();
-            motorista.getCNH();
-            motorista.getCPF();
-            motorista.getEmail();
-            motorista.getTelefone();
-            motorista.getIdade();
-            motorista.getEndereco();
+            System.out.println(motorista.getNome());
+            System.out.println(motorista.getCNH());
+            System.out.println(motorista.getCPF());
+            System.out.println(motorista.getEmail());
+            System.out.println(motorista.getTelefone());
+            System.out.println(motorista.getIdade());
+            System.out.println(motorista.getEndereco());
         }
     }
 

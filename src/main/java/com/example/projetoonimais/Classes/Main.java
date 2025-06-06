@@ -1,3 +1,4 @@
+
 package com.example.projetoonimais.Classes;
 
 import com.example.projetoonimais.Exceptions.*;
@@ -23,7 +24,7 @@ public class Main {
             EnumSet<Dias> diasAluno2 = EnumSet.of(Dias.TERCA, Dias.QUINTA, Dias.SEXTA);
 
             // Validação dos documentos dos alunos
-            if (!validarCPF("12345678900")) {
+            if (!validarCPF("123456789001")) {
                 throw new CpfException("CPF do aluno 1 é inválido");
             }
             if (!validarCPF("98765432100")) {
@@ -46,7 +47,7 @@ public class Main {
             if (!validarCPF("11111111111")) {
                 throw new CpfException("CPF do secretário é inválido");
             }
-            SecretarioAluno secretarioAluno = new SecretarioAluno("11111111111", "Carlos", 30, "sec@email.com", "000000000", "Rua C");
+            SecretarioAluno secretarioAluno = new SecretarioAluno("11111111111", "Carlos", 30, "sec@email.com", "454584818", "Rua C");
             dadosParaArquivo.add("Secretário de alunos: " + secretarioAluno.getNome());
             dadosParaArquivo.add("");
 
@@ -71,8 +72,8 @@ public class Main {
                 throw new CnhException("CNH do motorista 2 é inválida");
             }
 
-            Motorista motorista1 = new Motorista("22222222222", "Pedro", 45, "pedro@email.com", "111111111", "Rua D", 123456, 111111111);
-            Motorista motorista2 = new Motorista("33333333333", "Ana", 38, "ana@email.com", "222222222", "Rua E", 654321, 222222222);
+            Motorista motorista1 = new Motorista("12345678910", "Pedro", 45, "pedro@email.com", "400289221", "Rua D", 123456);
+            Motorista motorista2 = new Motorista("11121314151", "Ana", 38, "ana@email.com", "122982004", "Rua E", 654321);
             dadosParaArquivo.add("Motoristas registrados:");
             dadosParaArquivo.add("- " + motorista1.getNome() + " (CNH: " + motorista1.getCNH() + ")");
             dadosParaArquivo.add("- " + motorista2.getNome() + " (CNH: " + motorista2.getCNH() + ")");

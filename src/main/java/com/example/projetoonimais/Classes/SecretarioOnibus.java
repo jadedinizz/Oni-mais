@@ -2,24 +2,11 @@ package com.example.projetoonimais.Classes;
 
 import java.util.ArrayList;
 
-public class SecretarioOnibus implements SecretarioPoggers{
+public class SecretarioOnibus implements SecretarioInterface {
 
     private ArrayList<Onibus> todosOsOnibus = new ArrayList<>();
     private ArrayList<Motorista> todosOsMotoristas = new ArrayList<>();
     private static int quantidadeTotalDeOnibus = 0;
-
-    void listarOnibusDisponiveis(){
-        // Mostrar onibus disponiveis
-        // Pode ser carros
-    }
-
-    public void verificarDadosMotorista() {
-        // Printar os dados do motorista
-    }
-
-    public void desatribuir(){
-        // Tira um motorista do array;
-    }
 
 
     public void alocarOnibus(ArrayList<Onibus> onibus) {

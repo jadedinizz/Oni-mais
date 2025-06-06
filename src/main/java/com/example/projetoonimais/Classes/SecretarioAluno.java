@@ -2,9 +2,8 @@ package com.example.projetoonimais.Classes;
 
 import java.util.ArrayList;
 import java.util.EnumSet;
-import java.util.Scanner;
 
-public class SecretarioAluno extends Pessoa implements SecretarioPoggers{
+public class SecretarioAluno extends Pessoa implements SecretarioInterface {
 
     private static int totalAlunosCadastrados = 0;
     private static int totalAlunosSeg = 0;
@@ -54,23 +53,16 @@ public class SecretarioAluno extends Pessoa implements SecretarioPoggers{
         }
     }
 
-    public void alocarDiasAluno(){
-        // Colocar os dias dias que o aluno vai
-
-        // Excessao
-        // Se o aluno nao tiver um dia "Nenhum dia atribuido"
-    }
 
     public void alocarAluno(ArrayList<Aluno> aluno) {
         this.alunos = aluno;
 
         for (Aluno a : this.alunos){
-            a.setNome("Joao");
-            a.setCPF("23123123");
-            a.setInstituicao("Unifip");
-            a.setNome("Ovo");
-            a.setTelefone("121213");
-            a.setEndereco("Gogogoogogogog");
+            a.getNome();
+            a.getCPF();
+            a.getNome();
+            a.getTelefone();
+            a.getEndereco();
         }
     }
 

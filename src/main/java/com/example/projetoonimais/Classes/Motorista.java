@@ -2,13 +2,12 @@ package com.example.projetoonimais.Classes;
 
 public class Motorista extends Pessoa {
     private int CNH;
-    private int telefone;
 
 
-    public Motorista(String CPF, String nome, int idade, String email, String telefone, String endereco, int CNH, int telefone1) {
+
+    public Motorista(String CPF, String nome, int idade, String email, String telefone, String endereco, int CNH) {
         super(CPF, nome, idade, email, telefone, endereco);
         this.CNH = CNH;
-        this.telefone = telefone1;
     }
 
     // Gets e Sets
@@ -23,7 +22,4 @@ public class Motorista extends Pessoa {
     }
 
 
-    public void setTelefone(int telefone) {
-        this.telefone = telefone;
-    }
 }
